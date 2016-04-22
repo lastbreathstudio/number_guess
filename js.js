@@ -45,51 +45,41 @@ function validation(guess) {
   var guesses = [];
   
   function addGuesses (guess){
-  
-  guesses.push(guess);
-  $("#guesses").append("<p>" + guess + "   " + "</p>");
+  	guesses.push(guess);
   }
 
 // Compare number guessed back to number generated
 function comparison(guess) {
 
-// First guess
+	var para  = document.createElement('p');
+	var guessesDiv = document.getElementById('guesses');
+	var rightNunmDiv = document.getElementById('rightGuess');
+
+// Check guess
 function howClose(){
+	
   if (guess < randomNumber) {
     temp = "Too Low";
+    para.className = 'low';
+    para.innerHTML = guess;
+    guessesDiv.appendChild(para);
   }
   if (guess > randomNumber  ) {
     temp = "Too High";
+    para.className = 'high';
+    para.innerHTML = guess;
+    guessesDiv.appendChild(para);
     }
-  } 
+  }
    howClose();
-
-
-// Subsequest guesses
-function Guess(){
-  var lastNum = guesses.length;
-  var finalNum = (lastNum - 1);
-  //console.log('finalnum = '+ finalnum);
-
-  var nextGuess = (lastNum - 2);
-
-  var guessDifference =  Math.abs(randomNumber-guesses[finalNum]); 
-
-  var previousGuessDifference = Math.abs(randomNumber - guesses[nextGuess] );
-
-  if (guessDifference <= previousGuessDifference) {
-    temp = "Getting Hotter";
-  }
-  else {
-    temp = "Getting Colder";
-  }
-}
-  if (guesses.length >= 2) {
-    Guess();
-  }
+	
   if (randomNumber == guess) {
+  		para.className = 'rightNum animated pulse';
+        para.innerHTML = guess;
+        guessesDiv.appendChild(para);
+
     if (guesses.length == 1) {
-      temp = "WOW, got it first time!";
+      temp = "Nice, got it first time!";
     }
     else temp = "You did it!!! in " + " " + guesses.length + " " + "tries";
 

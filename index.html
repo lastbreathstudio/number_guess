@@ -7,26 +7,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
-<div class="hotorcold">
 		<div id="container">
+		<div id="inner">
 			<header>
 			<h1>Guess number</h1>
 			</header>
-			
+			<form>
 			<input type="text" name="playerGuess" id="playerGuess" maxlength="3" autocomplete="off">
-			<div id="submit" class="button">Submit</div>
-			
+			<div id="submit" class="button btn btn-primary">Submit</div>
+			</form>
 			<div id="reply"></div>
 			<div id="guesses"></div>
+			<div id="rightGuess"></div>
 		</div>
 		</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-<script src="js/main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script src="js.js"></script>
 </body>
 </html>
 
