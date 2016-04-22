@@ -1,6 +1,5 @@
 body{
 	background:url("back.jpg") no-repeat;
-	background-color: green;
 }
 #inner{
 	text-align:center;
@@ -54,33 +53,3 @@ form{
   animation-name: pulse;
   animation-duration: 1s;
 }
-/*#container{
-	width:70%;
-	margin:0 auto;
-	padding-top:100px;
-}
-
-h1{
-	display:inline;
-	padding:20px;
-	margin-top:30px;
-	border:2px solid #000;
-}
-
-input{
-	margin-top:30px;
-}
-
-
-.rightNum{
-	text-align:center;
-	line-height: 100px;
-	width:100px;
-	margin:0 auto;
-	font-size:60px;
-	color:white;
-	xmargin-top:70px;
-	border-radius: 50px;
-	background-color: #990000;
-
-}*/
